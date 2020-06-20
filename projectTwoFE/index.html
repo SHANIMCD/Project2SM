@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <title>Workout Builder</title>
+</head>
+
+<body onload="formElements();">
+    <section class="home-section">
+        <h1 class="home-title">
+            Workout Builder
+        </h1>
+        <a href="#nav"><img height="80px" text-decoration="white"
+                src="https://cdn.iconscout.com/icon/free/png-256/double-down-arrow-861727.png" /></a>
+    </section>
+    <nav class="nav-foot-style" id="nav">
+        <a onclick="showAdd();" id="add-ex-link">Add an exercise</a>
+        <a onclick="showList();" id="showlist">List All</a>
+        <a>Build a Workout</a>
+    </nav>
+    <section id="index" class="index-section">
+        <div class="ex-container">
+            <h2>Exercises</h2>
+        </div>
+        <div class="wo-container">
+            <h2>Workouts</h2>
+        </div>
+
+    </section>
+    <section id="add-ex" class="add-ex-sect">
+    </section>
+    <footer class="nav-foot-style">
+        <p>Made with ❤️ by Shani McDonald</p>
+    </footer>
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/addExercise.js"></script>
+    <script src="./scripts/buildWorkout.js"></script>
+</body>
+
+</html>
