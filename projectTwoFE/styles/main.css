@@ -1,11 +1,12 @@
 * {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .home-section {
     height: 100vh;
-    background-image: url('https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');
+    background-image: url('https://images.unsplash.com/photo-1434596922112-19c563067271?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -13,7 +14,20 @@
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+    animation: slideBg 20s linear infinite 0s;
+    animation-timing-function: ease-in-out;
+    backface-visibility: hidden;
 }
+
+@keyframes slideBg {
+    0% { background-image: url('https://images.unsplash.com/photo-1434596922112-19c563067271?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80'); }
+    25% { background-image: url('https://images.unsplash.com/photo-1565349478421-5e1abedadbec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80'); }
+    55% { background-image: url('https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80'); }
+    85% { background-image: url('https://images.unsplash.com/photo-1517931524326-bdd55a541177?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80'); }
+}
+
+
+
 .home-title {
     font-size: 70px;
     text-transform: uppercase;
@@ -55,11 +69,12 @@ nav a {
 }
 
 .index-section {
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: center;
+    background-color: #dbe7d5;
 }
 
 .sec-none {
@@ -79,7 +94,7 @@ nav a {
 
 .ex-container {
     border: 2px solid black;
-    height: 90vh;
+    height: 70vh;
     width: 48%;
     margin-right: 20px;
 }
@@ -91,10 +106,11 @@ nav a {
     width: 45%;   
 }
 
+/* Beginning Add Exercise section  */
 
 .add-ex-sect {
     height: 80vh;
-    background-color: #ffa78d;
+    background-color: #b1c493;
 }
 
 
@@ -136,3 +152,18 @@ button {
     border-radius: 5px;
     margin: auto;
 }
+
+/* End of Add Exercise section  */
+/* Build Workout section  */
+
+.build-work-section {
+    background-color: rgb(211, 168, 115);
+    height: 80vh;
+}
+
+.build-title {
+    font-size: 40px;
+    text-align: center;
+}
+
+/* End of Build Workout section  */
