@@ -7,3 +7,5 @@ let buildTitle = document.createElement('h3')
 buildCont.appendChild(buildTitle)
 buildTitle.innerText = 'Build'
 buildTitle.className = 'build-title'
+
+// Select an exercise ID
