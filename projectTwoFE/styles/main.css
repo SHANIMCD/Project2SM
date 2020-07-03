@@ -69,12 +69,13 @@ nav a {
 }
 
 .index-section {
-    height: 80vh;
+    height: 700px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-content: center;
     background-color: #dbe7d5;
+    overflow-y: scroll;
 }
 
 .sec-none {
@@ -93,58 +94,75 @@ nav a {
 }
 
 .ex-container {
+    /* padding-top: 220px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* border: 2px solid black; */
+    align-content: center;
+    margin-right: 10px;
+    max-height: fit-content;
+    
+}
+
+.eachex {
+    border-radius: 5px;
+    font-size: small;
+    text-transform: uppercase;
+    text-align: center;
     border: 2px solid black;
-    height: 70vh;
-    width: 48%;
-    margin-right: 20px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.ex-image {
+    max-height: 200px;
+    max-width: 200px;
+}
+
+/* Individual Exercise Section */
+#ex-ind {
+    height: 300px;
+    text-transform: uppercase;
+    align-items: center;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+#ex-ind h3, h4 {
+    font-size: small;
 }
 
 
-.wo-container {
-    background-color: black;
-    color: white;
-    width: 45%;   
-}
 
 /* Beginning Add Exercise section  */
 
 .add-ex-sect {
-    height: 80vh;
+    height: 50vh;
     background-color: #b1c493;
+    
 }
 
-
-.form-container input {
-    height: 30px;
-    text-align: center;
-    margin: 10px;
-}
-
-.form-container select {
-    height: 30px;
-    text-align: center;
-    margin: 10px;
-}
-
-.form-container {
- align-content: center;
-}
-
-form {
+#ex-form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    padding: 10% 0;
 }
 
-.imgprompt {
-    border: 1px solid rgb(63, 63, 63);
-    background-color: white;
-    color: black;
-    max-width: fit-content;
-    padding: 5px 20px;
-    margin: 10px auto;
-    border-radius: 5px;
+
+#ex-form input {
+    height: 30px;
+    text-align: center;
+    margin: 10px;
 }
+
+#ex-form select {
+    height: 30px;
+    text-align: center;
+    margin: 10px;
+}
+
 
 button {
     max-width: fit-content;
@@ -158,7 +176,7 @@ button {
 
 .build-work-section {
     background-color: rgb(211, 168, 115);
-    height: 80vh;
+    height: 0vh;
 }
 
 .build-title {
