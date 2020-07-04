@@ -69,7 +69,7 @@ nav a {
 }
 
 .index-section {
-    height: 700px;
+    height: 500px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -147,7 +147,7 @@ nav a {
 #ex-form {
     display: flex;
     flex-direction: column;
-    padding: 10% 0;
+    /* padding: 10% 0; */
 }
 
 
@@ -176,7 +176,7 @@ button {
 
 .build-work-section {
     background-color: rgb(211, 168, 115);
-    height: 0vh;
+    height: 80vh;
 }
 
 .build-title {
