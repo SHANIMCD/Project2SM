@@ -74,7 +74,7 @@ nav a {
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    background-color: #dbe7d5;
+    background-color: #e9e9e9;
     overflow-y: scroll;
 }
 
@@ -139,8 +139,8 @@ nav a {
 /* Beginning Add Exercise section  */
 
 .add-ex-sect {
-    height: 50vh;
-    background-color: #b1c493;
+    height: 45vh;
+    background-color: #fdeabf;
     
 }
 
@@ -172,11 +172,28 @@ button {
 }
 
 /* End of Add Exercise section  */
+
+
+/* Update Exercise section */
+
+
+
 /* Build Workout section  */
 
 .build-work-section {
-    background-color: rgb(211, 168, 115);
-    height: 80vh;
+    background-color:#b6c5bf;
+    height: 40vh;
+}
+
+.woContainer {
+ 
+    border-radius: 5px;
+    font-size: small;
+    text-transform: uppercase;
+    /* text-align: center; */
+    border: 1px solid black;
+    /* padding: 5px; */
+    margin: 5px;
 }
 
 .build-title {

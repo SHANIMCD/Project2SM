@@ -8,12 +8,30 @@
     document.getElementById('submitButton').addEventListener('click', (e) => {
         e.preventDefault();
         let info = {}
-        document.querySelectorAll('#ex-form > input, #ex-form > select').forEach(x => info[x.name] = x.value);
+        document.querySelectorAll('#ex-form > input, #ex-form > select, #ex-form > div > input').forEach(x => info[x.name] = x.value);
+        info.id = undefined;
+        info.workout = {
+            id: document.getElementById('addWorkoutID').value
+        }
         axios.post('http://localhost:8081/create', info)
+        .then(console.log(info))
             .catch(err => console.log(err))
         location.reload();
     })
 })();
 
+
+(function () {
+    document.getElementById('createWO').addEventListener('click', (e) => {
+        e.preventDefault();
+        let info = {};
+            document.querySelectorAll('#cWoForm > input').forEach(x => info[x.name] = x.value);
+            axios.post('http://localhost:8081/wo/create', info)
+            .then(res => location.reload())
+            .catch(err => console.log(err))
+            
+        
+    })
+})();
 
 

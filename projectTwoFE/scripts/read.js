@@ -1,3 +1,6 @@
+let updateExForm = document.getElementById('updateEx')
+updateExForm.style.display ='none';
+
 
 (function () {
     axios.get('http://localhost:8081/read')
@@ -59,55 +62,39 @@
                             updateButton.innerText = 'UPDATE'
                             exIndex.appendChild(updateButton)
 
-                            updateButton.addEventListener('click', () => {
-                                window.location.href = '#build-work'
-
+                
+                            updateButton.addEventListener('click', () => {                          
+                                updateExForm.style.display ='flex';
+                                updateButton.style.display = 'none'
+                                deleteButton.style.display = 'none'
+                                exCon.style.display = 'none' 
                                 document.getElementById('updateName').value = ex.name;
-                                document.getElementById('updateImage').value = ex.imageMain
-                                document.getElementById('updateCatSelect').value = ex.category
-                                    const catSelectUpdate = document.getElementById('updateCatSelect')
-                                    catSelectUpdate.addEventListener('click', () => {
-                                        catSelectUpdate.options[0].disabled = true
-                                    })
-                                    document.getElementById('updateButton').addEventListener('click', (e) => {
-                                        e.preventDefault();
-                                        let info = {};
-                                        document.querySelectorAll('#update-ex-form > input, #update-ex-form > select').forEach(x => info[x.name] = x.value);
-                                        axios.put('http://localhost:8081/update/' + ex.e_id, info)
-                                            .then(res => console.log(res))
-                                            .catch(err => console.error(err));
-                                            location.reload();
-                                    });
+                                document.getElementById('updateImage').value = ex.imageMain;
+                                document.getElementById('updateCatSelect').value = ex.category;
+                                                                
+                                console.log(ex.workout);
+                                const catSelectUpdate = document.getElementById('updateCatSelect')
+                                catSelectUpdate.addEventListener('click', () => {
+                                    catSelectUpdate.options[0].disabled = true
+                                })
+                                document.getElementById('updateButton').addEventListener('click', (e) => {
+                                    e.preventDefault();
+                                    let info = {};
+                                    document.querySelectorAll('#update-ex-form > input, #update-ex-form > select').forEach(x => info[x.name] = x.value);
+                                    info.id = undefined;
+                                    info.workout = {
+                                        id: document.getElementById('updateWorkoutID').value
+                                    }
+                                    axios.put('http://localhost:8081/update/' + ex.e_id, info)
+                                        .then(res => console.log(res))
+                                        .catch(err => console.error(err));
+                                    location.reload();
+                                });
                             })
-                         
+
                         })
                 }
             })
         })
         .catch(err => console.log(err))
-})();
-
-
-
-(function () {
-    axios.get('http://localhost:8081/wo/read')
-        .then(res => {
-            res.data.forEach(wo => {
-                const woCon = document.getElementById('wo-index')
-
-                const woDiv = document.createElement('div')
-                woDiv.className = 'eachWo'
-                woCon.appendChild(woDiv)
-
-                const title = document.createElement('h3')
-                title.innerText = wo.title
-                woDiv.appendChild(title)
-
-                wo.exercise.forEach(ex => {
-                    const exName = document.createElement('p')
-                    exName.innerText = ex.name
-                    woDiv.appendChild(exName)
-                })
-            })
-        })
 })();

@@ -7,6 +7,8 @@ const buildSection = document.querySelector('.build-work-section')
 
 const navigation  = document.getElementById('nav')
 
+AddEx.style.display = 'none';
+
 // indexSection.style.display = 'none'
 // AddEx.style.display = 'none'
 // buildSection.style.display = 'none'
